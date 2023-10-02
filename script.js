@@ -1,6 +1,11 @@
 const element = document.getElementById("myElement");
+const buttons = document.querySelectorAll(".btn");
+const equal = document.getElementById("equal");
+const delet = document.getElementById( 'delet' )
+const reset = document.getElementById( 'reset' )
 
-const buttons = document.querySelectorAll("div button");
+
+
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function () {
     element.innerHTML += buttons[i].innerHTML;
@@ -8,7 +13,7 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
-const equal = document.getElementById("equal");
+
 
 equal.addEventListener("click", function () {
   console.log( eval(element.innerHTML) )
@@ -16,13 +21,13 @@ equal.addEventListener("click", function () {
 });
 
 
-const delet = document.getElementById( 'delet' )
+
 
 delet.addEventListener( 'click',function(){
   element.innerHTML = element.innerHTML.slice(0, -1);
 } )
 
-const reset = document.getElementById( 'reset' )
+
 
 reset.addEventListener('click', function(){
   element.innerHTML = ""
